@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".activities.BankAccountActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar"
+            android:layout_marginBottom="@dimen/dp_100"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/bank_account_to_receive_your_payments"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorGray"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_holder"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAcHolderName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="@string/write_the_account_holder"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_number"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAcNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="@string/write_the_account_number"
+                        android:inputType="phone"
+                        tools:ignore="LabelFor,NegativeMargin"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_of_the_bank"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <TextView
+                        android:id="@+id/tvBank"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center|left"
+                        android:paddingEnd="@dimen/dp_8"
+                        android:drawableEnd="@drawable/ic_spinner_icon"
+                        android:hint="@string/select_bank"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="16sp"/>
+
+
+                </RelativeLayout>
+
+               <!-- <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Número de ruta"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <TextView
+                        android:id="@+id/tvIFSC"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true"
+                        android:paddingStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center|left"
+                        android:paddingEnd="@dimen/dp_8"
+                        android:drawableEnd="@drawable/ic_spinner_icon"
+                        android:hint="Seleccione banco ruta"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="16sp"/>
+
+
+                </RelativeLayout>-->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/account_type"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorDarkBlack"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                <RadioGroup
+                    android:id="@+id/rgAcType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_20">
+
+                    <RadioButton
+                        android:id="@+id/rbSaving"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/saving"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textColor="@drawable/radio_color_selector"
+                        android:textSize="16sp"
+                        android:paddingStart="@dimen/dp_16"/>
+
+                    <RadioButton
+                        android:id="@+id/rbStream"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/stream"
+                        android:fontFamily="@font/rubik_medium"
+                        android:textColor="@drawable/radio_color_selector"
+                        android:textSize="16sp"
+                        android:paddingStart="@dimen/dp_16"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_54"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:visibility="visible" />
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSaveUpdate"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_54"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_32"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_32"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="@string/save"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:visibility="gone" />
+
+    </RelativeLayout>
+</layout>

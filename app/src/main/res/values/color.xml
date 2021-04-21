@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_primary">#FE3C00</color>
+    <color name="color_primary_variant">#3700b3</color>
+    <color name="color_secondary">#FE3C00</color>
+    <color name="color_secondary_variant">#3700b3</color>
+
+    <!--colorBackground appears behind scrollable content and is used for the default window-->
+    <!--background. colorSurface is mapped to the surface of components such as cards, sheets-->
+    <!--and menus. colorError is used to indicate an error state for components such as-->
+    <!--text fields.-->
+    <color name="color_background">#ffffff</color>
+    <color name="color_surface">#ffffff</color>
+    <color name="color_error">#b00020</color>
+
+    <!--"On" colors define how text, icons and strokes are colored in relation to the surface-->
+    <!--on which they appear.-->
+    <color name="color_on_primary">#ffffff</color>
+    <color name="color_on_secondary">#000000</color>
+    <color name="color_on_background">#000000</color>
+    <color name="color_on_surface">#000000</color>
+    <color name="color_on_error">#ffffff</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorGray">#838A9C</color>
+    <color name="colorBlue">#095DA6</color>
+    <color name="colorDarkBlack">#141B2F</color>
+    <color name="colorLightGray">#CCD0D7</color>
+    <color name="colorBorder">#E0E2E6</color>
+    <color name="tranparent">#00000000</color>
+    <color name="colorHintText">#BCBFC6</color>
+    <color name="colorView">#EFF0F2</color>
+    <color name="colorTextHeading1">#484848</color>
+    <color name="colorTextHeading2">#767676</color>
+    <color name="colorGreen">#01C089</color>
+    <color name="colorLightGreen">#16E2C7</color>
+    <color name="colorSeparator">#E0E0E0</color>
+    <color name="colorShimmer">#dddddd</color>
+    <color name="colorPrimaryPix">#FE3C00</color>
+    <color name="colorPrimaryLightPix">#80FE3C00</color>
+    <color name="colorStatusOpen">#35AC2B</color>
+    <color name="colorStatusAwarded">#095DA6</color>
+    <color name="colorStatusCompleted">#01E4D1</color>
+    <color name="colorStatusCancelled">#D9D9D9</color>
+    <color name="colorStatusInprogress">#FE7400</color>
+    <color name="colorStatusEnRevisión">#FE1C00</color>
+    <color name="star_selected">#ff9800</color>
+    <color name="blue_gray_font">#77869e</color>
+</resources>

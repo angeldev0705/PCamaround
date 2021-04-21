@@ -1,0 +1,13 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="@color/colorWhite"/>
+            <corners android:radius="@dimen/dp_4"/>
+            <stroke
+                android:dashGap="@dimen/dp_4"
+                android:dashWidth="@dimen/dp_4"
+                android:width="@dimen/dp_1"
+                android:color="#BFC4CE" />
+        </shape>
+    </item>
+</layer-list>

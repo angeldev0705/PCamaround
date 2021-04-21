@@ -1,0 +1,19 @@
+project name camarounduser
+github camaround
+bellskurds@gmail.com
+Kakaroto12!
+
+comet chat pro
+pass: pFH@m4vAV27xTAd
+user: camarounds@gmail.com
+
+facebook and google account
+email - camaroundspty@gmail.com 
+pass - Camaround@123
+
+key store path - D:\shantiinfotech\TuCamaround\Pcamaround\keystore\keystore.jks
+
+pass - pcamaround
+
+alias - key0
+pass - pcamaround

@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.PaymentMethodActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/btnAddPayment"
+            android:layout_below="@+id/myToolbar"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rlPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/etprice"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center|left"
+                        android:hint="180.00"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_32">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/card_number"
+                        android:textColor="@color/colorDarkBlack"
+                        android:layout_centerVertical="true"
+                        android:textSize="18sp" />
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/vi"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@+id/ivmc"
+                        android:layout_marginEnd="@dimen/dp_16"/>
+                    <ImageView
+                        android:id="@+id/ivmc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/mc"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"/>
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+
+                    <morxander.editcard.EditCard
+                        android:id="@+id/etCardNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:hint="@string/write_the_card_number"
+                        android:inputType="phone"
+                        android:background="@null" />
+
+
+<!--
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCardNo"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="@string/write_the_card_number"
+                        android:inputType="phone"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp"
+                        tools:ignore="LabelFor,NegativeMargin"
+                        android:visibility="gone"/>
+-->
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="@string/exp_month"
+                            android:textColor="@color/colorDarkBlack"
+                            android:textSize="18sp" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:background="@drawable/bg_edit_fill_with_border"
+                            android:gravity="center|left"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvMonth"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/rubik_regular"
+                                android:gravity="center"
+                                android:hint="Mes"
+                                android:paddingStart="@dimen/dp_12"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text=" /  "
+                                android:textColor="@color/colorHintText"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="18sp" />
+
+                            <TextView
+                                android:id="@+id/tvYear"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:fontFamily="@font/rubik_regular"
+                                android:gravity="center|left"
+                                android:hint="Año"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="18sp" />
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="CVV"
+                            android:textColor="@color/colorDarkBlack"
+                            android:textSize="18sp" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_50"
+                            android:layout_marginTop="@dimen/dp_16"
+                            android:background="@drawable/bg_edit_fill_with_border">
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etcvv"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dp_15"
+                                android:background="@color/tranparent"
+                                android:fontFamily="@font/rubik_regular"
+                                android:hint="CVV"
+                                android:inputType="numberPassword"
+                                android:maxLength="3"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textColorHint="@color/colorHintText"
+                                android:textSize="18sp" />
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/name_on_card"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etNameOnCard"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz "
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="Escribe el Nombre"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_60"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:src="@drawable/payment_logo"
+            android:layout_above="@+id/btnAddPayment"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddPayment"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_54"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:backgroundTint="@color/color_primary"
+            android:fontFamily="@font/rubik_medium"
+            android:gravity="center"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            android:text="Añadir método de pago"
+            android:textAllCaps="false"
+            android:textColor="@color/colorWhite"
+            android:textSize="16sp"
+            android:visibility="visible" />
+
+
+    </RelativeLayout>
+</layout>

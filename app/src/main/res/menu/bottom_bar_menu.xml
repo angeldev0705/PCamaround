@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/itemMenu"
+        android:checked="true"
+        android:icon="@drawable/menu_selecteor"
+        android:title="@string/menu"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/itemSearch"
+        android:checked="true"
+        android:icon="@drawable/search_selector"
+        android:title="@string/search"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/itemCamarounds"
+        android:checked="true"
+        android:icon="@drawable/camaround_selector"
+        android:title="@string/camarounds"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/itemMessages"
+        android:checked="true"
+        android:icon="@drawable/messages_selector"
+        android:title="@string/messages"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/itemProfile"
+        android:checked="true"
+        android:icon="@drawable/profile_selector"
+        android:title="@string/my_profile"
+        app:showAsAction="ifRoom"
+        />
+</menu>

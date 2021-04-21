@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="@dimen/dp_90"
+        android:layout_height="@dimen/dp_90"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/ivimage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@color/colorShimmer"
+            app:riv_corner_radius="@dimen/dp_4"/>
+
+        <ImageView
+            android:id="@+id/ivdelete"
+            android:layout_width="@dimen/dp_30"
+            android:layout_height="@dimen/dp_30"
+            android:layout_alignParentEnd="true"
+            android:padding="@dimen/dp_5"
+            android:src="@drawable/ic_delete_image"
+            android:visibility="gone"
+            android:foreground="?attr/selectableItemBackgroundBorderless"/>
+    </RelativeLayout>
+</layout>

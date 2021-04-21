@@ -1,0 +1,622 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".fragments.MenuFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_140"
+                        android:background="@color/color_primary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_46"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/dp_50"
+                            android:fontFamily="@font/rubik_bold"
+                            android:text=""
+                            android:textColor="@color/colorWhite"
+                            android:textSize="22sp" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_1"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/dp_8">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/dp_12">
+
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlsettle"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivSettle"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_settle" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dp_8"
+                                            android:layout_toEndOf="@+id/ivSettle"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/i_settle"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvTotalEarnings"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rlsettle"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_marginEnd="@dimen/dp_32"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:includeFontPadding="false"
+                                        android:letterSpacing="0"
+                                        android:singleLine="true"
+                                        android:text="$0.00"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:id="@+id/ivInfoSettle"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/ic_info_icon" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_4"
+                                android:layout_marginTop="@dimen/dp_1"
+                                android:layout_marginEnd="@dimen/dp_1"
+                                android:layout_marginBottom="@dimen/dp_1"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/dp_8">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/dp_12">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlincome"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivIncome"
+                                            android:layout_width="@dimen/dp_24"
+                                            android:layout_height="@dimen/dp_24"
+                                            android:src="@drawable/doller_icon" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dp_5"
+                                            android:layout_toEndOf="@+id/ivIncome"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/income"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+                                    <TextView
+                                        android:id="@+id/tvIncome"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rlincome"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_marginEnd="@dimen/dp_32"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:includeFontPadding="false"
+                                        android:letterSpacing="0"
+                                        android:singleLine="true"
+                                        android:text="$0.00"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:id="@+id/ivInfoIncome"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:layout_marginBottom="@dimen/dp_8"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/ic_info_icon" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_1"
+                                android:layout_marginTop="@dimen/dp_1"
+                                android:layout_marginEnd="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_1"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/dp_8">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/dp_12">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlcamaround"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivCamarounds"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_my_camaround" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dp_5"
+                                            android:layout_toEndOf="@+id/ivCamarounds"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/my_ncamarounds"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="12sp" />
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/tvCamarounds"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rlcamaround"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_marginEnd="@dimen/dp_32"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:includeFontPadding="false"
+                                        android:letterSpacing="0"
+                                        android:singleLine="true"
+                                        android:text="0"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:id="@+id/ivInfoCamarounds"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/ic_info_icon" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_4"
+                                android:layout_marginBottom="@dimen/dp_1"
+                                android:layout_weight="1"
+                                app:cardCornerRadius="@dimen/dp_8">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/dp_12">
+
+                                    <RelativeLayout
+                                        android:id="@+id/rlpending"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <ImageView
+                                            android:id="@+id/ivPending"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:src="@drawable/ic_pending" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginStart="@dimen/dp_5"
+                                            android:layout_toEndOf="@+id/ivPending"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/pending"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="12sp" />
+
+
+                                    </RelativeLayout>
+
+
+                                    <TextView
+                                        android:id="@+id/tvPending"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/rlpending"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_marginEnd="@dimen/dp_32"
+                                        android:ellipsize="end"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:includeFontPadding="false"
+                                        android:letterSpacing="0"
+                                        android:singleLine="true"
+                                        android:text="$0.00"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="14sp" />
+
+                                    <ImageView
+                                        android:id="@+id/ivInfoPending"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentEnd="true"
+                                        android:layout_alignParentBottom="true"
+                                        android:padding="@dimen/dp_4"
+                                        android:src="@drawable/ic_info_icon" />
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/llAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="ALERTAS DE TRABAJO"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="Selecciona un área y radio de distancia para recibir notificaciones de oportunidades cerca de ti."
+                        android:textColor="@color/colorGray"
+                        android:textSize="14sp"
+                        android:visibility="visible" />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:background="@drawable/bg_edit_text">
+
+                        <ImageView
+                            android:id="@+id/ivAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:src="@drawable/ic_home_location" />
+
+                        <View
+                            android:id="@+id/viewAddress"
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:layout_toEndOf="@+id/ivAddress"
+                            android:background="@color/colorView" />
+
+                        <TextView
+                            android:id="@+id/etAddress"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:layout_toEndOf="@+id/viewAddress"
+                            android:background="@color/tranparent"
+                            android:fontFamily="@font/rubik_regular"
+                            android:gravity="center|left"
+                            android:hint="Escribe una dirección"
+                            android:inputType="text"
+                            android:textColor="@color/colorDarkBlack"
+                            android:textColorHint="@color/colorDarkBlack"
+                            android:textSize="18sp" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:background="@drawable/bg_edit_text">
+
+                        <ImageView
+                            android:id="@+id/ivRadius"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:src="@drawable/ic_radius_icon" />
+
+                        <View
+                            android:id="@+id/viewRadius"
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_14"
+                            android:layout_toEndOf="@+id/ivRadius"
+                            android:background="@color/colorView" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etRadius"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="@dimen/dp_15"
+                            android:layout_marginEnd="@dimen/dp_50"
+                            android:layout_toEndOf="@+id/viewRadius"
+                            android:background="@color/tranparent"
+                            android:fontFamily="@font/rubik_regular"
+                            android:hint="Radio de Alcance"
+                            android:inputType="numberDecimal"
+                            android:textColor="@color/colorDarkBlack"
+                            android:textColorHint="@color/colorDarkBlack"
+                            android:textSize="18sp" />
+
+                        <View
+                            android:id="@+id/viewKm"
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="@dimen/dp_30"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_toStartOf="@+id/tvkm"
+                            android:background="@color/colorView" />
+
+                        <TextView
+                            android:id="@+id/tvkm"
+                            android:layout_width="@dimen/dp_30"
+                            android:layout_height="match_parent"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:gravity="center"
+                            android:text="KM"
+                            android:textColor="@color/colorDarkBlack" />
+
+                    </RelativeLayout>
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnSave"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_54"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_42"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:backgroundTint="@color/color_primary"
+                        android:fontFamily="@font/rubik_medium"
+                        android:gravity="center"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/save"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Camarounds cotizados"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center"
+                        android:text="No tienes Camarounds, ¡Cotiza ya!"
+                        android:textColor="@color/colorGray"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvAwarded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:fontFamily="@font/rubik_medium"
+                    android:text="@string/awarded_camarounds"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp"
+                    android:visibility="gone" />
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rVAwarded"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:id="@+id/rlLatest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_16">
+
+                    <TextView
+                        android:id="@+id/tvLatest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Camarounds cotizados"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textSize="18sp"
+                        android:visibility="visible" />
+
+                    <TextView
+                        android:id="@+id/tvMore"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/rubik_regular"
+                        android:padding="@dimen/dp_4"
+                        android:text="Ver Más"
+                        android:textColor="@color/color_primary"
+                        android:textSize="12sp"
+                        android:visibility="visible" />
+
+                </RelativeLayout>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rVLatestProject"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:visibility="gone" />
+
+
+                <LinearLayout
+                    android:id="@+id/llNoLising"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_180"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:background="@drawable/bg_dashed_border"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/no_list_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:fontFamily="@font/rubik_medium"
+                        android:text="Sin resultados"
+                        android:textColor="#484848"
+                        android:textSize="18sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

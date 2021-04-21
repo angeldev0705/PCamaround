@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".activities.ContactUsActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar"
+            android:fillViewport="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/additional_information"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlEnqury"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <ImageView
+                        android:id="@+id/ivconsultation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:src="@drawable/ic_help_consultation" />
+
+                    <View
+                        android:id="@+id/viewconsultation"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:layout_toEndOf="@+id/ivconsultation"
+                        android:background="@color/colorView" />
+
+                    <TextView
+                        android:id="@+id/etConsultation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toEndOf="@+id/viewconsultation"
+                        android:background="@color/tranparent"
+                        android:drawableEnd="@drawable/ic_spinner_icon"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center|left"
+                        android:hint="@string/type_of_consultation"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlLastOrdr"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <ImageView
+                        android:id="@+id/ivreference"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:src="@drawable/ic_help_reference_number" />
+
+                    <View
+                        android:id="@+id/viewreference"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:layout_toEndOf="@+id/ivreference"
+                        android:background="@color/colorView" />
+
+                    <TextView
+                        android:id="@+id/etReference"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:layout_toEndOf="@+id/viewreference"
+                        android:background="@color/tranparent"
+                        android:drawableEnd="@drawable/ic_spinner_icon"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="center|left"
+                        android:hint="@string/reference_number"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/photos_files"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp" />
+
+                <LinearLayout
+                    android:id="@+id/llPhoto"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_133"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_dashed_border"
+                    android:gravity="center">
+
+
+                    <ImageView
+                        android:id="@+id/ivUpload"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/dp_4"
+                        android:src="@drawable/ic_upload_image" />
+
+                    <TextView
+                        android:id="@+id/tvUploadImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_4"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/upload_files"
+                        android:textColor="@color/colorGray"
+                        android:textSize="16sp" />
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/llrv"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llAdd"
+                        android:layout_width="@dimen/dp_90"
+                        android:layout_height="@dimen/dp_90"
+                        android:background="@drawable/bg_dhashes"
+                        android:gravity="center"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_16"
+                        android:visibility="visible"
+                        android:orientation="vertical">
+
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_upload_image" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/rubik_regular"
+                            android:text="@string/upload_files"
+                            android:textColor="@color/colorGray"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/how_can_we_help_you"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etDescribe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_marginTop="@dimen/dp_10"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:gravity="top|left"
+                        android:hint="@string/please_describe_what_you_need"
+                        android:inputType="textMultiLine"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp"
+                        android:minHeight="@dimen/dp_140"/>
+
+
+                </RelativeLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSend"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/send"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

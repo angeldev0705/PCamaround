@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="wrap_content"
+        android:background="@color/tranparent"
+        android:minHeight="@dimen/dp_280">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_60"
+            android:backgroundTint="@color/colorWhite"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_64"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvmsgggg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/dp_26"
+                    android:maxLines="2"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:paddingRight="@dimen/dp_22"
+                    android:text="¿Seguro que quieres cancelar esta solicitud?"
+                    android:textColor="@color/colorGray"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCancel"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/rubik_medium"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/cancel"
+                        android:textAllCaps="false"
+                        android:textColor="#838A9C"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:cornerRadius="@dimen/dp_6"
+                        app:strokeColor="@color/colorSeparator"
+                        app:strokeWidth="@dimen/dp_1" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnConfirm"
+                        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/dp_44"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:layout_weight="1"
+                        android:backgroundTint="@color/color_primary"
+                        android:fontFamily="@font/rubik_medium"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:text="@string/yes"
+                        android:textAllCaps="false"
+                        android:textColor="@color/colorWhite"
+                        android:textSize="16sp"
+                        android:visibility="visible"
+                        app:cornerRadius="@dimen/dp_6" />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivwarningimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_cancel_icon" />
+
+    </RelativeLayout>
+</layout>

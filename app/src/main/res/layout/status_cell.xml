@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+     <LinearLayout
+         android:id="@+id/ll"
+         xmlns:android="http://schemas.android.com/apk/res/android"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:layout_marginBottom="@dimen/dp_8"
+         android:foreground="?attr/selectableItemBackgroundBorderless">
+
+          <RadioButton
+              android:id="@+id/rb"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:paddingStart="@dimen/dp_8"
+              android:text="rb"
+              android:textSize="16sp"
+              android:fontFamily="@font/rubik_medium"
+              android:textColor="@color/colorDarkBlack"/>
+     </LinearLayout>
+</layout>

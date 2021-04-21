@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".fragments.ProfileFragment">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_180"
+                        android:background="@color/color_primary" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_46"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <RelativeLayout
+                                android:id="@+id/rlpro"
+                                android:layout_width="@dimen/dp_80"
+                                android:layout_height="@dimen/dp_80">
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/ivProfile"
+                                    android:layout_width="@dimen/dp_80"
+                                    android:layout_height="@dimen/dp_80"
+                                    android:src="@drawable/profile_default"
+                                    app:civ_border_color="#33ffffff"
+                                    app:civ_border_width="@dimen/dp_5" />
+
+                                <ProgressBar
+                                    android:id="@+id/loading"
+                                    style="?android:attr/progressBarStyle"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true"
+                                    android:elevation="10dp"
+                                    android:indeterminateTint="@color/color_primary"
+                                    android:visibility="gone" />
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginStart="@dimen/dp_20"
+                                android:layout_toEndOf="@+id/rlpro"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/tvName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rubik_medium"
+                                    android:text=""
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="20sp" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+
+                                    <RatingBar
+                                        android:id="@+id/rating"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_10"
+                                        android:clickable="false"
+                                        android:focusable="false"
+                                        android:numStars="5"
+                                        android:scaleX="1.3"
+                                        android:scaleY="1.3"
+                                        android:stepSize="0.5"
+                                        android:theme="@style/RatingBarfeed"/>
+
+
+                                    <TextView
+                                        android:id="@+id/tvRating"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_26"
+                                        android:layout_toEndOf="@+id/rating"
+                                        android:fontFamily="@font/rubik_regular"
+                                        android:text=""
+                                        android:textColor="@color/colorWhite"
+                                        android:textSize="16sp" />
+
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/tvShowProfile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:text="@string/show_profile"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="14sp" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_10"
+                            android:orientation="horizontal">
+
+                            <androidx.cardview.widget.CardView
+                                android:id="@+id/cvMyBalance"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/dp_1"
+                                app:cardCornerRadius="@dimen/dp_8"
+                                app:cardElevation="@dimen/dp_2"
+                                app:cardPreventCornerOverlap="false">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/dp_16">
+
+                                    <ImageView
+                                        android:id="@+id/ivIncome"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/ic_wallet" />
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_10"
+                                        android:layout_toEndOf="@+id/ivIncome"
+                                        android:orientation="vertical">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical">
+
+                                            <TextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:fontFamily="@font/rubik_regular"
+                                                android:text="@string/balance"
+                                                android:textColor="@color/colorDarkBlack"
+                                                android:textSize="16sp" />
+                                            <TextView
+                                                android:id="@+id/tvAmount"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:ellipsize="end"
+                                                android:layout_marginTop="@dimen/dp_4"
+                                                android:fontFamily="@font/rubik_bold"
+                                                android:includeFontPadding="false"
+                                                android:letterSpacing="0"
+                                                android:singleLine="true"
+                                                android:text="$0.00"
+                                                android:visibility="visible"
+                                                android:textColor="@color/colorDarkBlack"
+                                                android:textSize="20sp" />
+
+<!--
+                                            <TextView
+                                                android:id="@+id/tvPaynow"
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:fontFamily="@font/rubik_medium"
+                                                android:text="@string/pay_now"
+                                                android:visibility="gone"
+                                                android:textColor="@color/colorDarkBlack"
+                                                android:textSize="14sp" />
+-->
+
+
+                                        </LinearLayout>
+                                        <com.google.android.material.button.MaterialButton
+                                            android:id="@+id/tvPaynow"
+                                            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/dp_32"
+                                            android:layout_alignParentEnd="true"
+                                            android:backgroundTint="@color/colorPrimary"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:gravity="center"
+                                            android:insetTop="0dp"
+                                            android:insetBottom="0dp"
+                                            android:text="@string/pay_now"
+                                            android:textAllCaps="false"
+                                            android:textColor="@color/colorWhite"
+                                            android:textSize="14sp"
+                                            android:visibility="gone"/>
+
+
+
+                                    </RelativeLayout>
+
+
+                                </RelativeLayout>
+                            </androidx.cardview.widget.CardView>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_20"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/setting"
+                        android:textColor="@color/colorGray"
+                        android:textSize="18sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvPersonalInfo"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_personal_info" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/personal_information"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvChangePass"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        android:visibility="gone"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_change_pass" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/change_password"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvPaymentMethod"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_bank_account" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="Métodos de pago"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvBackAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false"
+                        android:visibility="visible">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_bank_account" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/bank_account"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvNotification"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_notification" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/notifications"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/help_center"
+                        android:textColor="@color/colorGray"
+                        android:textSize="18sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvFreques"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_frequent_ques" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/frequent_questions"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvContactUs"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_contact_us" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/contact_us"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:fontFamily="@font/rubik_regular"
+                        android:text="@string/others"
+                        android:textColor="@color/colorGray"
+                        android:textSize="18sp" />
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvAboutComar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_about_camaround" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/about_camarounds"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvTermAndCondi"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_1"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_terms_and_cond" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/terms_and_conditions"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/cvLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_60"
+                        android:layout_marginStart="@dimen/dp_1"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_1"
+                        android:layout_marginBottom="@dimen/dp_20"
+                        android:foreground="?attr/selectableItemBackgroundBorderless"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_2"
+                        app:cardPreventCornerOverlap="false">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:paddingStart="@dimen/dp_24"
+                            android:paddingTop="@dimen/dp_18"
+                            android:paddingEnd="@dimen/dp_24"
+                            android:paddingBottom="@dimen/dp_18">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_logout" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:fontFamily="@font/rubik_regular"
+                                android:text="@string/logout"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+</layout>

@@ -1,0 +1,536 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".activities.PreviewDetailSearchActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvCamaroundDetails"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:visibility="visible"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlCamaroundDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/dp_12"
+                            android:paddingBottom="@dimen/dp_12"
+                            android:layout_marginStart="@dimen/dp_32"
+                            android:layout_marginEnd="@dimen/dp_32">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/dp_20"
+                                android:fontFamily="@font/rubik_medium"
+                                android:text="@string/camaround_details"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:id="@+id/ivDetailDD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:rotation="180"
+                                android:src="@drawable/ic_dropdown" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llCamaroundDetails"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="@color/colorSeparator"
+                                android:layout_marginStart="@dimen/dp_32"
+                                android:layout_marginEnd="@dimen/dp_32"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_24"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:text="@string/client"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="18sp"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_8"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32">
+
+                                    <de.hdodenhof.circleimageview.CircleImageView
+                                        android:id="@+id/ivClientProfile"
+                                        android:layout_width="@dimen/dp_40"
+                                        android:layout_height="@dimen/dp_40"
+                                        android:src="@drawable/profile_default" />
+
+                                    <TextView
+                                        android:id="@+id/tvClientName"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_16"
+                                        android:layout_toEndOf="@+id/ivClientProfile"
+                                        android:fontFamily="@font/rubik_medium"
+                                        android:text=""
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="14sp" />
+
+                                    <TextView
+                                        android:id="@+id/tvRating"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvClientName"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_16"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_toEndOf="@+id/ivClientProfile"
+                                        android:fontFamily="@font/rubik_regular"
+                                        android:text="0"
+                                        android:textColor="@color/colorGray"
+                                        android:textSize="14sp" />
+
+
+                                    <RatingBar
+                                        android:id="@+id/rating"
+                                        style="?android:attr/ratingBarStyleSmall"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvClientName"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_10"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_toEndOf="@+id/tvRating"
+                                        android:clickable="false"
+                                        android:focusable="false"
+                                        android:numStars="5"
+                                        android:scaleX="1.1"
+                                        android:scaleY="1.1"
+                                        android:stepSize="0.5"
+                                        android:theme="@style/RatingBar" />
+
+                                    <TextView
+                                        android:id="@+id/tvTotRatings"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_below="@+id/tvClientName"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/dp_20"
+                                        android:layout_marginTop="@dimen/dp_5"
+                                        android:layout_toEndOf="@+id/rating"
+                                        android:fontFamily="@font/rubik_regular"
+                                        android:text="@string/_32_ratings"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="12sp" />
+
+                                </RelativeLayout>
+
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvService"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_16"
+                                    android:overScrollMode="never"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+
+                                <TextView
+                                    android:id="@+id/tvDetall"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_24"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:lineHeight="@dimen/dp_22"
+                                    android:text="@string/descripci_n"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="18sp"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                                <TextView
+                                    android:id="@+id/tvServiceDetail"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_16"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:lineHeight="@dimen/dp_22"
+                                    android:text=""
+                                    android:textColor="@color/colorDarkBlack"
+                                    android:textSize="18sp"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                                <TextView
+                                    android:id="@+id/tvPhoto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_24"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:lineHeight="@dimen/dp_22"
+                                    android:text="@string/images_files"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="18sp"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                                <androidx.recyclerview.widget.RecyclerView
+                                    android:id="@+id/rvImages"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:visibility="gone"
+                                    android:layout_marginStart="@dimen/dp_16"
+                                    android:layout_marginEnd="@dimen/dp_16"/>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_24"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:lineHeight="@dimen/dp_22"
+                                    android:text="@string/location"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="18sp"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                                <TextView
+                                    android:id="@+id/tvAddress"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_16"
+                                    android:layout_marginBottom="@dimen/dp_20"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:lineHeight="@dimen/dp_22"
+                                    android:text=""
+                                    android:textColor="@color/colorDarkBlack"
+                                    android:textSize="18sp"
+                                    android:layout_marginStart="@dimen/dp_32"
+                                    android:layout_marginEnd="@dimen/dp_32"/>
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cvQuotation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingTop="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:paddingBottom="@dimen/dp_16"
+                    android:visibility="visible"
+                    app:cardElevation="@dimen/card_elevation">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_32"
+                        android:layout_marginEnd="@dimen/dp_32"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:id="@+id/rlQuotation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="@dimen/dp_12"
+                            android:paddingBottom="@dimen/dp_12">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginEnd="@dimen/dp_20"
+                                android:fontFamily="@font/rubik_medium"
+                                android:text="@string/quotation"
+                                android:textColor="@color/colorDarkBlack"
+                                android:textSize="18sp" />
+
+                            <ImageView
+                                android:id="@+id/ivQuotationDD"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:rotation="180"
+                                android:src="@drawable/ic_dropdown"
+                                android:visibility="gone" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/llQuotation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_1"
+                                android:background="@color/colorSeparator" />
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_24"
+                                android:orientation="vertical">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:backgroundTint="#CFFFF1"
+                                    app:cardCornerRadius="@dimen/dp_6"
+                                    app:cardElevation="0dp">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/rubik_regular"
+                                        android:lineHeight="@dimen/dp_22"
+                                        android:padding="@dimen/dp_16"
+                                        android:text="@string/the_commission_will_be_charged_to_your_account_when_the_client_awards_you_the_camaround_and_you_accept_it"
+                                        android:textColor="@color/colorDarkBlack"
+                                        android:textSize="14sp" />
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_24"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/dp_8"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/what_you_will_be_paid"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_10"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="$1800.00"
+                                            android:textColor="@color/colorDarkBlack"
+                                            android:textSize="18sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_8"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/perform_in"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_10"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="4 Días"
+                                            android:textColor="@color/colorDarkBlack"
+                                            android:textSize="18sp" />
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_30"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginEnd="@dimen/dp_8"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/commission"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_10"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="$180.00"
+                                            android:textColor="@color/colorDarkBlack"
+                                            android:textSize="18sp" />
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/dp_8"
+                                        android:layout_weight="1"
+                                        android:orientation="vertical">
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/your_quote"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_10"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="$1980.00"
+                                            android:textColor="@color/colorDarkBlack"
+                                            android:textSize="18sp" />
+
+                                        <TextView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginTop="@dimen/dp_10"
+                                            android:fontFamily="@font/rubik_regular"
+                                            android:text="@string/includes_materials"
+                                            android:textColor="@color/colorGray"
+                                            android:textSize="14sp" />
+
+                                    </LinearLayout>
+
+
+                                </LinearLayout>
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_24"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:text="@string/comments"
+                                    android:textColor="@color/colorGray"
+                                    android:textSize="18sp" />
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/dp_16"
+                                    android:fontFamily="@font/rubik_regular"
+                                    android:text="Puedes describir tu experiencia, trabajos similares, condiciones especiales, etc."
+                                    android:textColor="@color/colorDarkBlack"
+                                    android:textSize="18sp" />
+
+                                <com.google.android.material.button.MaterialButton
+                                    android:id="@+id/btnModifyQuote"
+                                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/dp_54"
+                                    android:layout_marginTop="@dimen/dp_34"
+                                    android:layout_marginBottom="@dimen/dp_30"
+                                    android:backgroundTint="@color/color_primary"
+                                    android:fontFamily="@font/rubik_medium"
+                                    android:gravity="center"
+                                    android:insetTop="0dp"
+                                    android:insetBottom="0dp"
+                                    android:text="@string/send_quote"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/colorWhite"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

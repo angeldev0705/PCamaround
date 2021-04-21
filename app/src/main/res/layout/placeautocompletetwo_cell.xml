@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="PlaceAutoCompleteModel"
+            type="com.pcamarounds.models.PlaceAutoCompleteModel"/>
+    </data>
+<RelativeLayout
+    android:foreground="?attr/selectableItemBackgroundBorderless"
+    android:padding="@dimen/dp_16"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_centerVertical="true"
+        android:textSize="16sp"
+        android:maxLines="2"
+        android:fontFamily="@font/rubik_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@{PlaceAutoCompleteModel.placeText}"
+        />
+
+</RelativeLayout>
+</layout>

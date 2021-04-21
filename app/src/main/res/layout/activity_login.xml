@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.LoginActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_above="@+id/tv"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:src="@drawable/ic_camarounds_txt_orange" />
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:fontFamily="@font/rubik_bold"
+                    android:text="@string/welcome"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="40sp" />
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_40"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_text">
+
+                    <ImageView
+                        android:id="@+id/ivEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:src="@drawable/ic_email" />
+
+                    <View
+                        android:id="@+id/viewEmail"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:layout_toEndOf="@+id/ivEmail"
+                        android:background="@color/colorView" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_toEndOf="@+id/viewEmail"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="@string/email"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="@dimen/dp_50"/>
+
+                    <ImageView
+                        android:id="@+id/ivVerified"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:src="@drawable/ic_unverified" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_text">
+
+                    <ImageView
+                        android:id="@+id/ivPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:src="@drawable/ic_password" />
+
+                    <View
+                        android:id="@+id/viewPassword"
+                        android:layout_width="@dimen/dp_1"
+                        android:layout_height="@dimen/dp_30"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_14"
+                        android:layout_toEndOf="@+id/ivPassword"
+                        android:background="@color/colorView" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:layout_toEndOf="@+id/viewPassword"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="@string/password"
+                        android:inputType="textPassword"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="16sp"
+                        android:layout_marginEnd="@dimen/dp_50"/>
+
+                    <ImageView
+                        android:id="@+id/show_pass_btn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:onClick="ShowHidePass"
+                        android:layout_marginEnd="@dimen/dp_16"
+                        android:src="@drawable/ic_eye_password_hide" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvForgotPass"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/rubik_regular"
+                    android:padding="@dimen/dp_5"
+                    android:text="@string/did_you_forget_your_password"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="14sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_42"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="@string/log_in"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+
+                <TextView
+                    android:id="@+id/tvregister"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:fontFamily="@font/rubik_regular"
+                    android:layout_gravity="center"
+                    android:padding="@dimen/dp_5"
+                    android:text="Regístrate como camaroneador"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="14sp"
+                    android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            </LinearLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <TextView
+            android:id="@+id/tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="@dimen/dp_20"
+            android:fontFamily="@font/rubik_regular"
+            android:text="@string/copyright_2020_camarounds"
+            android:textColor="@color/colorLightGray"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</layout>

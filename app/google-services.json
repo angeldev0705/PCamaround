@@ -1,0 +1,99 @@
+{
+  "project_info": {
+    "project_number": "192582826710",
+    "firebase_url": "https://camarounduserandroid.firebaseio.com",
+    "project_id": "camarounduserandroid",
+    "storage_bucket": "camarounduserandroid.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192582826710:android:e3bba04054bd81345ca777",
+        "android_client_info": {
+          "package_name": "com.camarounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192582826710-nd1kl0fd4n7mbdt3av9g8rs1qao6lp9d.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.camarounds",
+            "certificate_hash": "7689144ae6f8a5ed247e700e5c887c0f420a8dd0"
+          }
+        },
+        {
+          "client_id": "192582826710-3i08kd1kin7sb9qema19lkvvgdcqplsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7x6ZA3gLH64eF61f_kzsv_GjVBBRpXFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192582826710-bc9g6klg1br9bvh2c73u0ltltbluaefj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "192582826710-hqbns4vg3d2tgddd5jf4jjuicpuvof52.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tucamaround"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:192582826710:android:7f9099d72427c7e35ca777",
+        "android_client_info": {
+          "package_name": "com.pcamarounds"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "192582826710-tvv69c94i9iufn9jv200hasjahlb7v7u.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.pcamarounds",
+            "certificate_hash": "7689144ae6f8a5ed247e700e5c887c0f420a8dd0"
+          }
+        },
+        {
+          "client_id": "192582826710-3i08kd1kin7sb9qema19lkvvgdcqplsj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7x6ZA3gLH64eF61f_kzsv_GjVBBRpXFU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "192582826710-bc9g6klg1br9bvh2c73u0ltltbluaefj.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "192582826710-hqbns4vg3d2tgddd5jf4jjuicpuvof52.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tucamaround"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

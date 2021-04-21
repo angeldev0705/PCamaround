@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="@dimen/dp_300"
+        android:layout_height="@dimen/dp_334"
+        android:background="@color/tranparent">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/dp_300"
+            android:layout_height="@dimen/dp_274"
+            app:cardCornerRadius="@dimen/dp_8"
+            android:layout_alignParentBottom="true"
+            android:backgroundTint="@color/colorWhite"
+            app:cardElevation="0dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/dp_74">
+
+                <TextView
+                    android:id="@+id/tvmsgggg"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center"
+                    android:lineHeight="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:paddingLeft="@dimen/dp_22"
+                    android:paddingRight="@dimen/dp_22"
+                    android:text="Su solicitud ha sido procesada correctamente."
+                    android:textColor="@color/colorGray"
+                    android:textSize="18sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnGotoRequest"
+                    style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_54"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:backgroundTint="@color/color_primary"
+                    android:fontFamily="@font/rubik_medium"
+                    android:gravity="center"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:text="Volver a mis solicitudes"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="16sp"
+                    android:visibility="visible" />
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/ivwarningimage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/ic_thankyou_icon" />
+
+    </RelativeLayout>
+</layout>

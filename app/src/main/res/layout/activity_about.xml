@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activities.AboutActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <WebView
+                    android:id="@+id/webview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorGray"
+                    android:textSize="16sp"
+                    android:layout_gravity="center"/>
+
+                <!--<com.makeramen.roundedimageview.RoundedImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_140"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="@dimen/dp_23"
+                    android:scaleType="centerCrop"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:src="@drawable/about_dummy" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:layout_marginEnd="@dimen/dp_24"
+                    android:layout_marginBottom="@dimen/dp_20"
+                    android:fontFamily="@font/rubik_regular"
+                    android:lineHeight="@dimen/dp_26"
+                    android:text="Curabitur elementum magna quis rhoncus maximus. Vestibulum pellentesque sollicitudin efficitur. Cras id tincidunt augue. Aliquam quis aliquam lectus, et sagittis enim.
+Morbi lacus justo, aliquam quis fermentum at, tincidunt sit amet justo. Suspendisse rhoncus est nec nulla rutrum sodales. Nunc malesuada consectetur magna, vel aliquam dolor venenatis ut. Integer vel posuere ex. Praesent molestie lectus at ligula congue, eu pellentesque ex commodo. Integer pretium, tellus sed suscipit efficitur, dui risus efficitur velit, ultrices dignissim nisl est eget sapien. Nullam eget dolor quis elit sodales sollicitudin eget eget magna.
+Nunc id cursus quam. Suspendisse sit amet fermentum nibh. Nulla ac arcu imperdiet, volutpat est ac, imperdiet ligula. Cras at lacus blandit, molestie ipsum sit amet, accumsan odio. Praesent rutrum nisi nulla."
+                    android:textColor="@color/colorGray"
+                    android:textSize="16sp" />
+-->
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+</layout>

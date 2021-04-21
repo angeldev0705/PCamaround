@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape
+            android:id="@+id/listview_background_shape"
+            android:thickness="@dimen/dp_2">
+
+            <size android:height="0.6dp"
+                android:width="@dimen/dp_5"/>
+
+            <corners android:radius="@dimen/dp_16" />
+            <solid android:color="#E0E2E6" />
+        </shape>
+
+    </item>
+</layer-list>

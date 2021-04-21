@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="@dimen/dp_5">
+
+        <LinearLayout
+            android:id="@+id/llTextField1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTitle1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text=""
+                android:textColor="@color/colorGray"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/etAnswer1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:textColor="@color/colorDarkBlack"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llTextArea1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTitleArea1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text=""
+                android:textColor="@color/colorGray"
+                android:textSize="16sp"
+                />
+
+            <TextView
+                android:id="@+id/etAnswerArea1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_5"
+                android:fontFamily="@font/rubik_regular"
+                android:textColor="@color/colorDarkBlack"
+                android:textSize="16sp"
+                android:inputType="textMultiLine"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llCheckBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/dp_5"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTitleCheckBox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text=""
+                android:textColor="@color/colorGray"
+                android:textSize="16sp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycheck"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/llRadio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tvTitleRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/rubik_regular"
+                android:text=""
+                android:textColor="@color/colorGray"
+                android:textSize="16sp" />
+
+            <TextView
+                android:drawablePadding="@dimen/dp_8"
+                android:drawableStart="@drawable/ic_bullet"
+                android:id="@+id/rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:paddingTop="@dimen/dp_3"
+                android:text=""
+                android:minWidth="0dp"
+                android:minHeight="0dp"
+                android:textColor="@color/colorDarkBlack"
+                android:fontFamily="@font/rubik_regular"
+                android:textSize="16sp"
+                android:layout_marginTop="@dimen/dp_5"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

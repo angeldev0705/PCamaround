@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/dp_10"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/dp_44"
+            android:gravity="center"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:fontFamily="@font/rubik_medium"
+            app:strokeColor="@color/colorSeparator"
+            app:strokeWidth="@dimen/dp_1"
+            android:text="All"
+            app:cornerRadius="@dimen/dp_4"
+            android:textColor="@color/colorTextHeading1"
+            android:textSize="14sp"
+            android:textAllCaps="false"
+            android:includeFontPadding="false"/>
+
+    </RelativeLayout>
+</layout>

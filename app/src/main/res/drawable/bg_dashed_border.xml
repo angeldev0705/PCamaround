@@ -1,0 +1,18 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="@color/colorWhite"/>
+            <corners android:radius="@dimen/dp_8"/>
+            <stroke
+                android:dashGap="@dimen/dp_4"
+                android:dashWidth="@dimen/dp_4"
+                android:width="@dimen/dp_1"
+                android:color="#BFC4CE" />
+            <padding
+                android:bottom="@dimen/dp_5"
+                android:left="@dimen/dp_5"
+                android:right="@dimen/dp_5"
+                android:top="@dimen/dp_5" />
+        </shape>
+    </item>
+</layer-list>

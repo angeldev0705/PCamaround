@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".fragments.MessageFragment">
+
+       <!-- <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />-->
+
+        <RelativeLayout
+            android:id="@+id/rlHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_90"
+                android:background="@color/color_primary" />
+
+
+            <RelativeLayout
+                android:id="@+id/rlSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_45"
+                android:layout_marginEnd="@dimen/dp_24">
+
+                <TextView
+                    android:id="@+id/toolbar_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/rubik_regular"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="20sp"
+                    android:layout_centerInParent="true"
+                    android:text="@string/messages"/>
+
+                <ImageView
+                    android:id="@+id/ivSearch"
+                    android:layout_width="@dimen/dp_32"
+                    android:layout_height="@dimen/dp_32"
+                    android:layout_alignParentEnd="true"
+                    android:padding="@dimen/dp_6"
+                    android:src="@drawable/r_ic_search"
+                    android:tint="@color/colorWhite"
+                    android:visibility="visible" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:id="@+id/llSearchBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_22"
+                android:layout_marginEnd="@dimen/dp_24">
+
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:background="@drawable/bg_edit_fill_with_border"
+                    android:drawableEnd="@drawable/r_ic_search"
+                    android:fontFamily="@font/rubik_regular"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/dp_16"
+                    android:paddingEnd="@dimen/dp_16"
+                    android:hint="Escribe una palabra..."
+                    android:maxLines="1"
+                    android:inputType="text"
+                    android:imeOptions="actionSearch"
+                    android:textColor="@color/colorGray"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.cometchat.pro.uikit.CometChatConversationList
+            android:id="@+id/rv_conversation_list"
+            android:layout_width="match_parent"
+            tools:listitem="@layout/conversation_list_row"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlHeader"/>
+        <com.facebook.shimmer.ShimmerFrameLayout
+            android:id="@+id/shimmer_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"
+            app:shimmer_auto_start="true"
+            app:shimmer_repeat_delay="500"
+            android:layout_below="@+id/rlHeader">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+                <include layout="@layout/conversation_placeholder" />
+
+            </LinearLayout>
+
+        </com.facebook.shimmer.ShimmerFrameLayout>
+
+<!--
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rVMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlHeader"
+            android:layout_marginTop="@dimen/dp_8"
+            android:overScrollMode="never"
+            android:layout_marginStart="@dimen/dp_8"
+            android:layout_marginEnd="@dimen/dp_8"/>
+-->
+        <LinearLayout
+            android:id="@+id/llNoLising"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_180"
+            android:layout_marginStart="@dimen/dp_24"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:layout_below="@+id/rlHeader"
+            android:background="@drawable/bg_dashed_border"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/no_list_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/rubik_medium"
+                android:text="No tiene mensajes"
+                android:textColor="#484848"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>

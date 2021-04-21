@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#F7F8FA"
+        tools:context=".activities.CardPaymentActivity">
+
+        <include
+            android:id="@+id/myToolbar"
+            layout="@layout/toolbar" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/myToolbar"
+            android:layout_above="@+id/rlbottom"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:fontFamily="@font/rubik_regular"
+                    android:text="@string/amount_to_pay"
+                    android:textColor="@color/colorDarkBlack"
+                    android:textSize="18sp" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etAmount"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:inputType="numberDecimal"
+                        android:hint="180.00"
+                        android:singleLine="true"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+
+                </RelativeLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_16"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCardList"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_50"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:background="@drawable/bg_edit_fill_with_border"
+                        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+                        <TextView
+                            android:id="@+id/etBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:background="@color/tranparent"
+                            android:fontFamily="@font/rubik_regular"
+                            android:gravity="center|left"
+                            android:drawableStart="@drawable/card"
+                            android:hint="  ****1245"
+                            android:inputType="textCapWords"
+                            android:textColor="@color/colorDarkBlack"
+                            android:textColorHint="@color/colorHintText"
+                            android:textSize="14sp"
+                            android:layout_toStartOf="@+id/tvMonthYear"/>
+
+                        <TextView
+                            android:id="@+id/tvMonthYear"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:layout_toStartOf="@+id/ivdrop"
+                            android:fontFamily="@font/rubik_regular"
+                            android:hint=""
+                            android:textColor="@color/colorDarkBlack"
+                            android:textSize="12sp" />
+
+                        <ImageView
+                            android:id="@+id/ivdrop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            android:src="@drawable/ic_spinner_icon"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_marginStart="@dimen/dp_32"
+                    android:layout_marginTop="@dimen/dp_32"
+                    android:layout_marginEnd="@dimen/dp_32"
+                    android:background="@drawable/bg_edit_fill_with_border">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etcvv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="@dimen/dp_15"
+                        android:background="@color/tranparent"
+                        android:fontFamily="@font/rubik_regular"
+                        android:hint="CVV"
+                        android:inputType="numberPassword"
+                        android:maxLength="3"
+                        android:textColor="@color/colorDarkBlack"
+                        android:textColorHint="@color/colorHintText"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+        <RelativeLayout
+            android:id="@+id/rlbottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_56"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorWhite">
+
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/dp_32"
+                android:fontFamily="@font/rubik_medium"
+                android:text="$0.00"
+                android:textColor="@color/colorDarkBlack"
+                android:textSize="16sp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPayNow"
+                style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+                android:layout_width="@dimen/dp_100"
+                android:layout_height="@dimen/dp_36"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/dp_32"
+                android:backgroundTint="@color/color_primary"
+                android:fontFamily="@font/rubik_medium"
+                android:gravity="center"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:text="@string/pay"
+                android:textAllCaps="false"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp"
+                android:visibility="visible" />
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</layout>
